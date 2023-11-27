@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="accordion.css">
+	<title>accordion</title>
+</head>
+
+
+<body>
+	<section class="accordions">
+		<button class="accordion">Part 1 <div class="arrow">&#62;</div> </button>
+		<div class="panel">
+			<p>Content for Part 1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure reprehenderit minus inventore dolore nesciunt facilis, 
+				optio consequatur! Reiciendis doloremque, maxime soluta eum vitae aliquam magnam dolore placeat assumenda qui? Autem, quos quae. 
+				Nihil aut vel quo earum asperiores rem quibusdam a est nulla dolorum inventore, suscipit debitis culpa sit mollitia.</p>
+		</div>
+
+		<button class="accordion">Part 2 <div class="arrow">&#62;</div> </button>
+		<div class="panel">
+			<p>Content for Part 2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure reprehenderit minus inventore dolore nesciunt facilis, 
+				optio consequatur! Reiciendis doloremque, maxime soluta eum vitae aliquam magnam dolore placeat assumenda qui? Autem, quos quae. 
+				Nihil aut vel quo earum asperiores rem quibusdam a est nulla dolorum inventore, suscipit debitis culpa sit mollitia.</p>
+		</div>
+
+		<button class="accordion">Part 3 <div class="arrow">&#62;</div> </button>
+		<div class="panel">
+			<p>Content for Part 3 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure reprehenderit minus inventore dolore nesciunt facilis, 
+				optio consequatur! Reiciendis doloremque, maxime soluta eum vitae aliquam magnam dolore placeat assumenda qui? Autem, quos quae. 
+				Nihil aut vel quo earum asperiores rem quibusdam a est nulla dolorum inventore, suscipit debitis culpa sit mollitia.</p>
+		</div>
+
+		<button class="accordion">Part 4 <div class="arrow">&#62;</div> </button>
+		<div class="panel">
+			<p>Content for Part 4 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure reprehenderit minus inventore dolore nesciunt facilis, 
+				optio consequatur! Reiciendis doloremque, maxime soluta eum vitae aliquam magnam dolore placeat assumenda qui? Autem, quos quae. 
+				Nihil aut vel quo earum asperiores rem quibusdam a est nulla dolorum inventore, suscipit debitis culpa sit mollitia.</p>
+		</div>
+	</section>
+
+	<script>
+		var acc = document.getElementsByClassName("accordion");
+		for (let i = 0; i < acc.length; i++) {
+			acc[i].addEventListener("click", function () {
+				this.classList.toggle("active");
+				var panel = this.nextElementSibling;
+				var arrow = this.querySelector(".arrow");
+				if (panel.style.display === "block") {
+					panel.style.display = "none";
+					arrow.style.transform = "rotate(90deg)";
+				} else {
+					panel.style.display = "block";
+					arrow.style.transform = 'rotate(270deg)';
+				}
+			});
+		}
+	</script>
+</body>
+
+</html>
